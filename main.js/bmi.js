@@ -7,20 +7,20 @@ Create a JavaScript program that calculates the Body Mass Index (BMI) and assign
     - BMI >=25 and BMI <= 29.9, you are overweight.
     - Otherwise, you are obese.
 */
-
 //Check Done BMI Machine
 
 let underwightWeight = 18.5;
 let normal = 24.9;
 let overWeight = 29.9;
-let weight = 30;
+let weight = 25;
 
-if (weight == 18.5) {
-    console.log('Under WightWeight');
+if (weight <= 18.5) {
+    console.log('Under Weight');
 } 
 
-else if (weight >= 18.5 || 24.9) {
+else if (weight == 18.5 || 24.9) {
     console.log('Normal');
+
 }
 
 else if (weight >= 25 || 29.9) {

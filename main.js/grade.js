@@ -11,3 +11,25 @@ Create a simple JavaScript program that takes a student's score as input and ret
     F: 0-59
 
 ***/
+//Grade Calculator
+let marks = 99;
+
+if (marks >= 90) {
+    console.log("A")
+}
+
+else if (marks >= 80 || marks <= 89) {
+    console.log('B')
+}
+
+else if (marks >= 70 || marks <= 79) {
+    console.log('C')
+}
+
+else if (marks >= 60 || marks <= 69) {
+    console.log('D')
+}
+
+else {
+    console.log('F')
+};
