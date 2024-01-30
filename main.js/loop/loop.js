@@ -87,9 +87,42 @@ for (let eo = 61; eo < 100; eo++) {
 Subtask-1:
 Find all the even numbers from 61 to 100.
  */
-for (let eo = 78; eo <= 98; eo++) {
-    if (eo % 2 === 0) {
-        console.log("Even Numbers from 78 to 98: " + eo);
+// for (let eo = 78; eo <= 98; eo++) {
+//     if (eo % 2 === 0) {
+//         console.log("Even Numbers from 78 to 98: " + eo);
+//     }
+// }
+
+// let tub = 0;
+// for (let q = 11; q <= 20; q++) {
+//     tub = tub + q;
+//     // console.log(q);
+// }
+
+// console.log('tub of numbers from 11 to 20 is:', tub);
+
+// let tub = 0;
+// for (let b = 10; b >= -100; b--) {
+//     if (b % 2 !== 0)
+//         console.log(b)
+// }
+// console.log(tub);
+
+//Even Numbers by decremental way
+// for (let o = 61; o >= 51; o--) {
+//     if (o%2 === 0)
+//     console.log(o);
+// }
+for (let p = 1; p <= 30; p++) {
+    if (p % 5 === 0 || p % 3 === 0) {
+        console.log(p);
     }
 }
 
+
+    
+for (let j = 1; j <= 60; j++) {
+    if (j % 5 === 0 && j % 3 === 0) {
+        console.log(j);
+    }
+}
