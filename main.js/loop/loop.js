@@ -120,9 +120,37 @@ for (let p = 1; p <= 30; p++) {
 }
 
 
-    
+
 for (let j = 1; j <= 60; j++) {
     if (j % 5 === 0 && j % 3 === 0) {
         console.log(j);
     }
+}
+
+let total = 0; //I will find the sum of the numbers that will devidable by 3
+for (let f = 1; f <= 20; f++) {
+    if (f % 3 === 0) {
+        // console.log(f);
+        total = total + f;
+        console.log('Total', total)
+        break;
+    }
+}
+
+//Break Method
+for (let d = 20; d <= 60; d++) {
+    console.log(d);
+    if (d >= 50) {
+        break
+    }
+}
+
+for (let i = 0; i < 5; i += 3) {
+    console.log(i);
+}
+
+let k = 0;
+while (k < 5) {
+    console.log(k);
+    k++;
 }
