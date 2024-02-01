@@ -42,7 +42,6 @@ for (const number of numbers3) {
     concatenateString += number;
 }
 console.log(concatenateString);
-
 // **Output:**
 // `'TomTimTinTik'`
 
@@ -50,8 +49,10 @@ console.log(concatenateString);
 // ### Task 4 (Hard)
 // Reverse the words of a sentence. Only the position of the word will be reversed. check out the output
 // **Input:**
-// `const statement = 'I am a hard working person'`
-
+const statement = 'I am a hard working person';
+const words = statement.split(' ');
+const reversed = words.reverse().join(' ');
+console.log(reversed);
 // **Output:**
 // `'person working hard a am I'`
 
