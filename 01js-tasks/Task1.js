@@ -7,8 +7,8 @@
 let myTk = 1000;
 let apple = 400;
 let orange = 300;
-let taka = orange + apple;
-console.log(myTk - taka);
+let totalCost = orange + apple;
+console.log ('Shopkeeper Will Return= ',myTk - totalCost);
 
 // **Output:**
 // </br>
