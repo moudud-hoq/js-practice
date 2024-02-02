@@ -95,3 +95,25 @@ function countFoodBill2(rice, soup, fish, fry, egg, smashPotato) {
 }
 const countBill2 = countFoodBill2(15, 10, 60, 20, 25, 10);
 console.log('Your Bill is: ', countBill2);
+
+//***********11 Video No 20.5 Conditional Return by Even Number Check-------------- */
+function isEven(number1) {
+    if (number1 % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log('The Even Number is: ', isEven(5));
+console.log('The Even Number is: ',isEven(110));
+
+//***********11 Video No 20.5 Conditional Return by Odd Number Check-------------- */
+function isEven(number2) {
+    if (number2 % 2 !== 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log('The odd Number is: ', isEven(110));
+console.log('The odd Number is: ',isEven(5));
