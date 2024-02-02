@@ -69,3 +69,13 @@ function differencesBtwAgeOfBabaMa(babarAge, mayerAge) {
 const fatherAge = 60;
 const motherAge = 45;
 differencesBtwAgeOfBabaMa(fatherAge, motherAge);
+
+
+//************08----------------- Use of Return Function */
+function firstTimeReturn(number) {
+    const returning = number * 3;
+    return returning;
+}
+returningOutput = firstTimeReturn(2);
+console.log('This is the initial output :', returningOutput);
+console.log('If We want to more functionality by others function:', returningOutput - 1);
