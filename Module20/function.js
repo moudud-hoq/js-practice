@@ -25,3 +25,12 @@ function multipleSquare(num1, num2, num3,) {
 }
 //Call
 multipleSquare(3, 5, 8);
+
+
+//Checking individual numbers of student
+function addAll (Math, Biology, Bengali, Chemistry, Physics){
+    const total= Math+ Biology+ Bengali+ Chemistry+ Physics;
+    console.log('Checking individual numbers of student :', Math, Biology, Bengali, Chemistry, Physics);
+    console.log('Result of student :', total);
+}
+addAll(50,60,70,80,90);
