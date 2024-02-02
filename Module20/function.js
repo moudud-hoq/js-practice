@@ -79,3 +79,19 @@ function firstTimeReturn(number) {
 returningOutput = firstTimeReturn(2);
 console.log('This is the initial output :', returningOutput);
 console.log('If We want to more functionality by others function:', returningOutput - 1);
+
+
+//***********09 Video No 20.5-------------- */
+function countFoodBill(rice, soup, fish, fry) {
+    const totalBill = rice + soup + fish + fry;
+    return totalBill;
+}
+const countBill = countFoodBill(15, 10, 60, 20);
+console.log('Your Bill is: ', countBill);
+
+//***********10 Video No 20.5-------------- */
+function countFoodBill2(rice, soup, fish, fry, egg, smashPotato) {
+    return (rice + soup + fish + fry + egg + smashPotato);//Shortcut
+}
+const countBill2 = countFoodBill2(15, 10, 60, 20, 25, 10);
+console.log('Your Bill is: ', countBill2);
