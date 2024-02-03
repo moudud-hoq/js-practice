@@ -130,11 +130,11 @@ evenSizedString('Rangpur');
 function evenSizedString(str) {
     const size = str.length;
     console.log(str, size);
-    if (size%2===0){
+    if (size % 2 === 0) {
         console.log('Even Size');
         return true;
     }
-    else{
+    else {
         console.log('Odd Size');
         return false;
     }
@@ -147,3 +147,19 @@ console.log('The Number is: ', evenSizedString('Rangpur'));
 
 evenSizedString('Jaldhaka');
 console.log('The Number is: ', evenSizedString('Jaldhaka'));
+
+//Multiple Data TYpe FUnction
+function doubleOrTriple(number7, doDouble) {
+    if (doDouble === true) {
+        const output = number7 * 2;
+        return output;
+    } else {
+        const output = number7 * 4;
+        return output;
+    }
+}
+console.log(doubleOrTriple(5, true));
+console.log(doubleOrTriple(5, false));
+
+//The FUnction Using Array
+
