@@ -132,11 +132,18 @@ function evenSizedString(str) {
     console.log(str, size);
     if (size%2===0){
         console.log('Even Size');
+        return true;
     }
     else{
         console.log('Odd Size');
+        return false;
     }
 }
 evenSizedString('Dhaka');
+console.log('The Number is: ', evenSizedString('Dhaka'));
+
 evenSizedString('Rangpur');
+console.log('The Number is: ', evenSizedString('Rangpur'));
+
 evenSizedString('Jaldhaka');
+console.log('The Number is: ', evenSizedString('Jaldhaka'));
