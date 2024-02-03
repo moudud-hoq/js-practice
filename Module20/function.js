@@ -162,4 +162,18 @@ console.log(doubleOrTriple(5, true));
 console.log(doubleOrTriple(5, false));
 
 //The FUnction Using Array
+function numberOfArrayElements(number8) {
+    const len = number8.length;
+    return len;
+}
+const arrayLength=numberOfArrayElements([12, 50, 'Moudud', 25, 'Fahmid']);
+console.log('Number of array elements:', arrayLength);
+
+//Objective: The FUnction Using Array
+function numberOfArrayElements(number8) {
+    const len = number8.length;
+    return len;
+}
+const arrayLength=numberOfArrayElements([12, 50, 'Moudud', 25, 'Fahmid']);
+console.log('Number of array elements:', arrayLength);
 
