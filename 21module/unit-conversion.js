@@ -17,3 +17,14 @@ function mileToKm(mile) {
 }
 const ranpurToPaglapir2 = mileToKm(11);
 console.log(ranpurToPaglapir2);
+
+
+
+//Task one
+//Write a function to convert temperature from Celsius to Fahrenheit.
+function celToFer(cel) {
+    const fer = cel * (9 / 5) + 32;
+    return fer;
+}
+const todayTemp = celToFer(10);
+console.log(todayTemp);
