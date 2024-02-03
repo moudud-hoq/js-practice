@@ -148,7 +148,7 @@ console.log('The Number is: ', evenSizedString('Rangpur'));
 evenSizedString('Jaldhaka');
 console.log('The Number is: ', evenSizedString('Jaldhaka'));
 
-//Multiple Data TYpe FUnction
+//14  ----------------Multiple Data TYpe FUnction
 function doubleOrTriple(number7, doDouble) {
     if (doDouble === true) {
         const output = number7 * 2;
@@ -161,19 +161,36 @@ function doubleOrTriple(number7, doDouble) {
 console.log(doubleOrTriple(5, true));
 console.log(doubleOrTriple(5, false));
 
-//The FUnction Using Array
+//15 ===============The FUnction Using Array
 function numberOfArrayElements(number8) {
     const len = number8.length;
     return len;
 }
-const arrayLength=numberOfArrayElements([12, 50, 'Moudud', 25, 'Fahmid']);
+const arrayLength = numberOfArrayElements([12, 50, 'Moudud', 25, 'Fahmid']);
 console.log('Number of array elements:', arrayLength);
 
-//Objective: The FUnction Using Array
-function numberOfArrayElements(number8) {
-    const len = number8.length;
-    return len;
+//16 ------------Objective: 20-7 Sum Of All Numbers In An Array Using Function
+function numberOfArrayElementsSum(number9) {
+    let sum = 0;
+    for (const number of number9) {
+        console.log(number);
+        sum = sum + number;
+    }
+    return sum;
 }
-const arrayLength=numberOfArrayElements([12, 50, 'Moudud', 25, 'Fahmid']);
-console.log('Number of array elements:', arrayLength);
+const numbs = [12, 50, 100, 25, 10];
+const sum = numberOfArrayElementsSum(numbs);
+console.log('Sum of array elements:', sum);
 
+//17------------Objective: 20-7 Sum Of All Numbers In An Array Using Function Personal Practice
+function sumOfAnArrayByForLoop(number10) {
+    let sum1 = 0;
+    for (const arrayNumber of number10) {
+        console.log(arrayNumber);
+        sum1 = sum1 + arrayNumber;
+    }
+    return sum1;
+}
+const theArray = [10, 50, 10, 2, 3, 5];
+const sum1 = sumOfAnArrayByForLoop(theArray);
+console.log('Sum of array elements: ', sum1);
