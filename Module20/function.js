@@ -105,9 +105,9 @@ function isEven(number1) {
     }
 }
 console.log('The Even Number is: ', isEven(5));
-console.log('The Even Number is: ',isEven(110));
+console.log('The Even Number is: ', isEven(110));
 
-//***********11 Video No 20.5 Conditional Return by Odd Number Check-------------- */
+//***********12 Video No 20.5 Conditional Return by Odd Number Check-------------- */
 function isEven(number2) {
     if (number2 % 2 !== 0) {
         return true;
@@ -116,4 +116,27 @@ function isEven(number2) {
     }
 }
 console.log('The odd Number is: ', isEven(110));
-console.log('The odd Number is: ',isEven(5));
+console.log('The odd Number is: ', isEven(5));
+
+//***********13 Video No 20.6 Different type of parameters of a function------------- */
+function evenSizedString(str) {
+    const size = str.length;
+    console.log(str, size);
+}
+evenSizedString('Dhaka');
+evenSizedString('Rangpur');
+
+//If we want to see even or odd size
+function evenSizedString(str) {
+    const size = str.length;
+    console.log(str, size);
+    if (size%2===0){
+        console.log('Even Size');
+    }
+    else{
+        console.log('Odd Size');
+    }
+}
+evenSizedString('Dhaka');
+evenSizedString('Rangpur');
+evenSizedString('Jaldhaka');
