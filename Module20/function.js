@@ -61,6 +61,16 @@ let totalCost = 2 + 3;
 let ShopkeeperWillReturn = myMoney - totalCost;
 singleCount(ShopkeeperWillReturn);
 
+
+
+
+
+
+
+
+
+
+
 //07-------------------------Baba Mayer Age er differences
 function differencesBtwAgeOfBabaMa(babarAge, mayerAge) {
     const diff = babarAge - mayerAge;
@@ -69,6 +79,18 @@ function differencesBtwAgeOfBabaMa(babarAge, mayerAge) {
 const fatherAge = 60;
 const motherAge = 45;
 differencesBtwAgeOfBabaMa(fatherAge, motherAge);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //************08----------------- Use of Return Function */
@@ -81,6 +103,17 @@ console.log('This is the initial output :', returningOutput);
 console.log('If We want to more functionality by others function:', returningOutput - 1);
 
 
+
+
+
+
+
+
+
+
+
+
+
 //***********09 Video No 20.5-------------- */
 function countFoodBill(rice, soup, fish, fry) {
     const totalBill = rice + soup + fish + fry;
@@ -89,12 +122,39 @@ function countFoodBill(rice, soup, fish, fry) {
 const countBill = countFoodBill(15, 10, 60, 20);
 console.log('Your Bill is: ', countBill);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //***********10 Video No 20.5-------------- */
 function countFoodBill2(rice, soup, fish, fry, egg, smashPotato) {
     return (rice + soup + fish + fry + egg + smashPotato);//Shortcut
 }
 const countBill2 = countFoodBill2(15, 10, 60, 20, 25, 10);
 console.log('Your Bill is: ', countBill2);
+
+
+
+
+
+
+
+
+
+
+
+
 
 //***********11 Video No 20.5 Conditional Return by Even Number Check-------------- */
 function isEven(number1) {
@@ -107,6 +167,17 @@ function isEven(number1) {
 console.log('The Even Number is: ', isEven(5));
 console.log('The Even Number is: ', isEven(110));
 
+
+
+
+
+
+
+
+
+
+
+
 //***********12 Video No 20.5 Conditional Return by Odd Number Check-------------- */
 function isEven(number2) {
     if (number2 % 2 !== 0) {
@@ -118,6 +189,18 @@ function isEven(number2) {
 console.log('The odd Number is: ', isEven(110));
 console.log('The odd Number is: ', isEven(5));
 
+
+
+
+
+
+
+
+
+
+
+
+
 //***********13 Video No 20.6 Different type of parameters of a function------------- */
 function evenSizedString(str) {
     const size = str.length;
@@ -126,7 +209,25 @@ function evenSizedString(str) {
 evenSizedString('Dhaka');
 evenSizedString('Rangpur');
 
-//If we want to see even or odd size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//13 or If we want to see even or odd size
 function evenSizedString(str) {
     const size = str.length;
     console.log(str, size);
@@ -148,6 +249,14 @@ console.log('The Number is: ', evenSizedString('Rangpur'));
 evenSizedString('Jaldhaka');
 console.log('The Number is: ', evenSizedString('Jaldhaka'));
 
+
+
+
+
+
+
+
+
 //14  ----------------Multiple Data TYpe FUnction
 function doubleOrTriple(number7, doDouble) {
     if (doDouble === true) {
@@ -161,6 +270,26 @@ function doubleOrTriple(number7, doDouble) {
 console.log(doubleOrTriple(5, true));
 console.log(doubleOrTriple(5, false));
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //15 ===============The FUnction Using Array
 function numberOfArrayElements(number8) {
     const len = number8.length;
@@ -168,6 +297,31 @@ function numberOfArrayElements(number8) {
 }
 const arrayLength = numberOfArrayElements([12, 50, 'Moudud', 25, 'Fahmid']);
 console.log('Number of array elements:', arrayLength);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //16 ------------Objective: 20-7 Sum Of All Numbers In An Array Using Function
 function numberOfArrayElementsSum(number9) {
@@ -181,6 +335,17 @@ function numberOfArrayElementsSum(number9) {
 const numbs = [12, 50, 100, 25, 10];
 const sum = numberOfArrayElementsSum(numbs);
 console.log('Sum of array elements:', sum);
+
+
+
+
+
+
+
+
+
+
+
 
 //17------------Objective: 20-7 Sum Of All Numbers In An Array Using Function Personal Practice
 function sumOfAnArrayByForLoop(number10) {
