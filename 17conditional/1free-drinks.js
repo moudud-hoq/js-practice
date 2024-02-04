@@ -7,7 +7,7 @@ const burgerPrice = 551;
 const freeCoke = 0;
 const coke = 30;
 
-if (burgerPrice >= 500) {
+if (burgerPrice > 500)/*burgerPrice >= 500*/ {
     console.log('You Got Free Coke');
     total = burgerPrice + freeCoke;
 } else {

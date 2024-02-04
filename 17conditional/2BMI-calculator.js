@@ -9,5 +9,5 @@ Create a JavaScript program that calculates the Body Mass Index (BMI) and assign
     - BMI >=25 and BMI <= 29.9, you are overweight.
     - Otherwise, you are obese.
 */
-
+BMI = 8 / (1.5 ** 2)
 

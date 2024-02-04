@@ -9,6 +9,7 @@ let age = 60;
 let isStudent = true;
 let ticketPrice = 800;
 let ticketFare;
+
 if (age < 10) {
     ticketFare = 0;
 } else if (isStudent) {

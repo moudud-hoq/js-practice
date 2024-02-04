@@ -10,10 +10,10 @@ Note:
 use nested if-else-if-else
 */
 let myScore = (90);
-let score = (30);
+let score = (50);
 if (myScore >= 80) {
     console.log ("Cheers");
-    if (myScore >= 80) {
+    if (score >= 80) {
         console.log("Dear friend let's go for lunch");
     }
     if (score < 80 && score > 60) {

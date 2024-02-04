@@ -19,6 +19,8 @@ if (num1 > num2) {
     result = num1 + num2;
 }
 console.log(result);
+
+
 // Ternary of the above code
 let num3 = 5;
 let num4 = 3;
