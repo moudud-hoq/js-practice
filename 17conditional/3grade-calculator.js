@@ -9,7 +9,6 @@ Create a simple JavaScript program that takes a student's score as input and ret
     D:33-39
     F: 0-32
 ***/
-
 const marks = "50";
 
 if (marks >= 80 && marks <= 100) {
