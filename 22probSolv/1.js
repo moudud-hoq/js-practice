@@ -21,7 +21,6 @@ console.log("This is our first student in the class name Tania :", firstStudent)
 function getFirst2(per1, per2, per3) {
     if (per1 > per2 && per1 > per3) {
         return per1;
-        console
     }
     else if (per2 > per1 && per2 > per3) {
         return per2;
