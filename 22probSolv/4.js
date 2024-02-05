@@ -10,3 +10,8 @@ function getCheaPhone(phones) {
 
 const chepPrice = getCheaPhone(phonesPrice);
 console.log("The Cheapest Phone Price is :", chepPrice);
+
+
+
+
+

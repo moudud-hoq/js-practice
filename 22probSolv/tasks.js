@@ -43,21 +43,44 @@ console.log('The lowest height of the person is : ', result);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // ### Task -2: 
 // Find the friend with the smallest name.
-// <br>
-// `const heights2 = ['rahim', 'robin', 'rafi', 'ron', 'rashed'];`
+const frinds = ['rahim', 'robin', 'rafi', 'ron', 'rashed'];
+function getSmallNameFriend(smallFrind) {
+        let nameOfEachFriend = smallFrind[0];
+        for (const CurrentFriendNameAfterLooping of smallFrind) {
+                if (CurrentFriendNameAfterLooping > nameOfEachFriend) {
+                        nameOfEachFriend = CurrentFriendNameAfterLooping;
+                }
+        }
+        return nameOfEachFriend;
+}
+
+const smallFrindName = getSmallNameFriend(frinds);
+console.log("The Small Friend Name is:", smallFrindName);
+
+//Task 2 another version
+// Find the friend with the smallest name.
+const friends = ['Masud', 'Saju', 'Fuad', 'Maruf', 'Manik'];
+function theSmallFriend(Friend) {
+        let tiny = Friend[0];
+        for (let i = 0; i < Friend.length; i++) {
+                const tinyFriend2 = Friend[i];
+                if (tiny.length > tinyFriend2.length) {
+                        tiny = tinyFriend2
+                }
+        } return tiny
+}
+
+const smallFrind = theSmallFriend(friends);
+console.log("The Cheapest Phone Price is :", smallFrind);
+
+
+
+
+
+
+
 
 
 
