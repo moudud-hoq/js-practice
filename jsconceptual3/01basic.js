@@ -1,7 +1,7 @@
 //Fuction structure and basic functionality
 function personDetails(name, age, address) {
 
-    console.log(`My name is ${name}. My age is ${age}. I live in ${address}.`)
+    console.log(`My name is ${name}. My age is ${age}. I live in ${address}.`);
 
 }
 personDetails("Moudud", "27", "Jaldhaka");
