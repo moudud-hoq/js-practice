@@ -7,13 +7,29 @@
 
 function matchFinder(string1, string2) {
     //Error message
-    //যদি string1 একটা type of string না হয় এবং যদি string2 একটা type of string না হয় তাহলে মেসেজ হিসেবে return করতে হবে একটা অর্থবহ বার্তা
+    //যদি string1 একটা type of string না হয় or যদি string2 একটা type of string না হয় তাহলে মেসেজ হিসেবে return করতে হবে একটা অর্থবহ বার্তা
     if (typeof string1 !== 'string' || typeof string2 !== 'string') {
         return "Baba input a valid string otherwise it will not work"
     }
 
-    const similarities = string1.includes(string2);
-    return similarities;
+    const result = string1.includes(string2);
+    return result;
 }
-console.log(matchFinder('Peter Parker', 2));
-console.log(matchFinder('Peter Parker', 'pet'));
+console.log(matchFinder('Peter Parker', 'per'));
+console.log(matchFinder('Peter Parker', 'Pet')); //myQ- এগুলো কিভাবে ইনিক্লুড করবো?
+
+
+
+//#####################For Number
+function matchFinder2(number1, number2) {
+    if (typeof number1 === "number" && typeof number2 === "number") {
+        const result = number1 * number2;
+        return result;
+    }//personal exploration to show mentor
+
+
+    const result = number1.toString();
+    return result;
+}
+
+console.log('Number Match Finder:', matchFinder2(3, 5))
