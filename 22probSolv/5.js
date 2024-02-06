@@ -33,7 +33,7 @@
 // console.log('The total price is :', total);
 
 //3rd Check
-const productPrice = [
+const productPrice = [  
     { name: 'Tv', price: 300 },
     { name: 'Laptop', price: 200 },
     { name: 'Mobile', price: 100 },
@@ -49,6 +49,18 @@ function getTotalShopping(products) {
 
 const total = getTotalShopping(productPrice);
 console.log('The total price is :', total);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //For shoping cart
