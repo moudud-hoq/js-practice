@@ -1,3 +1,4 @@
+//01--------------------------------------------------------------------------------
 //You will got a function name matchFinder()
 //Take 2 string as input
 //If get similarities between 1st side of the string and full of last side of the string
@@ -19,7 +20,26 @@ console.log(matchFinder('Peter Parker', 'per'));
 console.log(matchFinder('Peter Parker', 'Pet')); //myQ- এগুলো কিভাবে ইনিক্লুড করবো?
 
 
+//02--------------------------------------------------------------------------------
+//You will got a function name matchFinder()
+//Take 2 string as input
+//If get similarities between 1st side of the string and full of last side of the string
+//Then return boolean data types, true
+//If not get similarities then return, false
+//Bonus: Both input are string or not check. If both or one not string then return a meaningfull message
+function matchFinder3(num1, num2) {
+    if (typeof num1 !== 'string' || typeof num2 !== 'string') {
+        return "Please provide a valid string";
+    } else {
+        const result = num1.includes(num2);
+        return result;
+    }
+}
+console.log(('The match between num1 and num2'), matchFinder3('Moududul Hoque', 'ou'));
+console.log(matchFinder3('Tania Akther', 'akther'))
 
+
+//03--------------------------------------------------------------------------------
 //#####################For Number
 function matchFinder2(number1, number2) {
     if (typeof number1 === "number" && typeof number2 === "number") {
@@ -33,3 +53,7 @@ function matchFinder2(number1, number2) {
 }
 
 console.log('Number Match Finder:', matchFinder2(3, 5))
+
+
+
+
