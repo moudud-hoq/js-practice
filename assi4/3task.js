@@ -33,7 +33,7 @@ const inputArray = [1, null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala"
 const resultArray = deleteInvalids(inputArray);
 console.log(resultArray);
 
-const inputArray2 = [1, { num: 2 }, NaN];
+const inputArray2 = ["1", { num: 2 }, NaN];
 const resultArray2 = deleteInvalids(inputArray2);
 console.log("2:", resultArray2);
 

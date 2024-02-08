@@ -32,39 +32,94 @@ Challenge: ফাংশন টি তখন invalid input কে string টি r
 // }
 
 
-function monthlySavings(payments, livingCost) {
-    // Validate inputs
-    if (!Array.isArray(payments) && typeof livingCost !== 'number') {
-        return "invalid input";
-    }
+// function monthlySavings(payments, livingCost) {
+//     // Validate inputs
+//     if (!Array.isArray(payments) && typeof livingCost !== 'number') {
+//         return "invalid input";
+//     }
 
-    // Calculate total income
+//     // Calculate total income
+//     let income = 0;
+
+//     for (const payment of payments) {
+//         income = income + payment;
+//     }
+
+//     // Calculate total tax
+//     let allTax = 0;
+//     for (const payment of payments) {
+//         if (payment >= 3000) {
+//             allTax = allTax + payment * 0.2;
+//         }
+//     }
+
+//     // Calculate savings
+//     const savings = income - allTax - livingCost;
+//     if (savings <= 0) {
+//         return "earn more";
+//     } else {
+//         return savings;
+//     }
+// }
+
+// console.log(monthlySavings([1000, 2000, 3000], 5400));
+// console.log(monthlySavings([1000, 2000, 2500], 5000));
+// console.log(monthlySavings([900, 2700, 3400], 10000));
+// console.log(monthlySavings(100, [900, 2700, 3400]));
+// console.log(monthlySavings([2000, 2500, 1500], [3000]));
+
+
+
+// function monthlySavings(payments, livingCost) {
+//     if (!Array.isArray(payments) && typeof livingCost !== "number") {
+//       return "invalid input";
+//     }
+
+//     let income = 0;
+//     for (const payment of payments) {
+//       if (payment >= 3000) {
+//         const allTax = payment - (payment * 20) / 100;
+//         income = income + allTax;
+//       } else {
+//         income = income + payment;
+//       }
+//     }
+
+//     const savings = income - livingCost;
+
+//     if (savings < 0) {
+//       return "earn more";
+//     }
+
+//     return savings;
+//   }
+
+
+function monthlySavings(payments, livingCost) {
+    if (!Array.isArray(payments) && typeof livingCost !== "number") {
+      return "invalid input";
+    }
+  
     let income = 0;
     for (const payment of payments) {
+      if (payment >= 3000) {
+        const allTax = payment - (payment * 20) / 100;
+        income = income + allTax;
+      } else {
         income = income + payment;
+      }
     }
-
-    // Calculate total tax
-    let tax = 0;
-    for (const payment of payments) {
-        if (payment >= 3000) {
-            tax = tax + payment * 0.2;
-        }
+  
+    const savings = income - livingCost;
+  
+    if (savings < 0) {
+      return "earn more";
     }
-
-    // Calculate savings
-    const savings = income - tax - livingCost;
-
-    if (savings >= 0) {
-        return savings;
-    } else {
-        return "earn more";
-    }
-}
-
-console.log(monthlySavings([1000, 2000, 3000], 5400));
-console.log(monthlySavings([1000, 2000, 2500], 5000));
-console.log(monthlySavings([900, 2700, 3400], 10000));
-console.log(monthlySavings(100, [900, 2700, 3400]));
-console.log(monthlySavings([2000, 2500, 1500], [3000]));
-
+  
+    return savings;
+  }
+  console.log("Number 5:-------------------------------------------------------------")
+  console.log(monthlySavings([1000, 2000, 3000], 5400));
+  console.log(monthlySavings([1000, 2000, 2500], 5000));
+  console.log(monthlySavings([900, 2700, 3400], 10000));
+  console.log(monthlySavings(100, [900, 2700, 3400]));

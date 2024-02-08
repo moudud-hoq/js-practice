@@ -1,6 +1,6 @@
 function calculateMoney(ticketSale) {
     if (ticketSale < 0) {
-        return "Please enter a number.......";
+        return "Invalid Number";
     }
     const ticketPrice = 120;
     const guardPayment = 500;
@@ -10,11 +10,9 @@ function calculateMoney(ticketSale) {
     return remain;
 }
 
-
-
 function checkName(name) {
     if (typeof name !== 'string') {
-        return "Invalid";
+        return "invalid";
     }
     const lastLetter = name.toLowerCase()[name.length - 1];
     const goodLetter = ["a", "e", "i", "o", "u", "y", "w"];
@@ -26,8 +24,6 @@ function checkName(name) {
     }
     return "Bad Name";
 }
-
-
 
 function deleteInvalids(array) {
     if (!Array.isArray(array)) {
@@ -43,8 +39,6 @@ function deleteInvalids(array) {
     }
     return putValidNum;
 }
-
-
 
 function password(obj) {
     const { name, birthYear, siteName } = obj;
@@ -62,29 +56,26 @@ function password(obj) {
     return passwordGenerationMachine;
 }
 
-
 function monthlySavings(payments, livingCost) {
-    if (!Array.isArray(payments) && typeof livingCost !== 'number') {
+    if (!Array.isArray(payments) && typeof livingCost !== "number") {
         return "invalid input";
     }
 
     let income = 0;
     for (const payment of payments) {
-        income = income + payment;
-    }
-
-    let tax = 0;
-    for (const payment of payments) {
         if (payment >= 3000) {
-            tax = tax + payment * 0.2;
+            const allTax = payment - (payment * 20) / 100;
+            income = income + allTax;
+        } else {
+            income = income + payment;
         }
     }
 
-    const savings = income - tax - livingCost;
+    const savings = income - livingCost;
 
-    if (savings >= 0) {
-        return savings;
-    } else {
+    if (savings < 0) {
         return "earn more";
     }
+
+    return savings;
 }
