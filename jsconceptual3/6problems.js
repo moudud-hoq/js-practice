@@ -71,19 +71,3 @@ function picnicBudget(perticipents) {
     }
 }
 console.log(picnicBudget(202));
-
-
-// function listOfname(count, userName) {
-//     if (typeof count !== 'number' || typeof userName !== 'string') {
-//         return "Please enter number and string";
-//     } else {
-//         let loop = '';
-//         for (let index = 0; index < count; index++) {
-//             loop += (`Count: ${index} = Name: ${userName}\n`);
-//         }
-//         return loop;
-//     }
-// }
-
-// let display = listOfname(10, "Name");
-// console.log(display);

@@ -61,3 +61,30 @@ function password(obj) {
     const passwordGenerationMachine = `${capitalizedSiteName}#${name}@${birthYear}`;
     return passwordGenerationMachine;
 }
+
+
+function monthlySavings(payments, livingCost) {
+    if (!Array.isArray(payments) && typeof livingCost !== 'number') {
+        return "invalid input";
+    }
+
+    let income = 0;
+    for (const payment of payments) {
+        income = income + payment;
+    }
+
+    let tax = 0;
+    for (const payment of payments) {
+        if (payment >= 3000) {
+            tax = tax + payment * 0.2;
+        }
+    }
+
+    const savings = income - tax - livingCost;
+
+    if (savings >= 0) {
+        return savings;
+    } else {
+        return "earn more";
+    }
+}
