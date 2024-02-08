@@ -11,33 +11,33 @@
 //     }
 
 function deleteInvalids(array) {
-    // Check if the input is an array
+    // input is an array?
     if (!Array.isArray(array)) {
         return "Invalid Array";
     }
-    // Create a new array to store valid numbers
+    // making a new array
     let putValidNum = [];
 
-    // Iterate through the input array
     for (let z = 0; z < array.length; z++) {
-        // Check if the current element is a number
+
+        //current element is a number?
         if (typeof array[z] === 'number' && !isNaN(array[z])) {
-            putValidNum.push(array[z]); // Add the valid number to the new array
+            putValidNum.push(array[z]);
         }
     }
-
-    // Return the array containing only valid numbers
     return putValidNum;
 }
 
-
-
 // Test the function
-const inputArray = [NaN, 1, 12, "a", -1, undefined];
+const inputArray = [1, null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }];
 const resultArray = deleteInvalids(inputArray);
-console.log(resultArray); // Output: [1, 12, 0, -1]
+console.log(resultArray);
+
+const inputArray2 = [1, { num: 2 }, NaN];
+const resultArray2 = deleteInvalids(inputArray2);
+console.log("2:", resultArray2);
 
 const invalidInput = 100;
 const errorMessage = deleteInvalids(invalidInput);
-console.log(errorMessage); // Output: Error: Input is not an array
+console.log(errorMessage);
 

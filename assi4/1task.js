@@ -11,17 +11,15 @@
 // টিকেটের আয় ও ব্যয় গুল ো ক্যালকুলে ট করে বাকী কত টাকা বাকে র ভাইর কাছে থাকল ো সে টা ই ত োমার ফাংশন আউটপুট হিসেবে রিটার্ন করবে । আউটপুট পজিটিভ নেগেটিভ যে ক োন কিছুই হতে পারে ।
 //যেমন ইনপুট যদি 10 হয় তাহলে আউটপুট হবে ( 10 * 120) - ( 500 + (8 * 50) ) = 300
 
-
-
 function calculateMoney(ticketSale) {
     if (ticketSale < 0) {
         return "Please enter a number.......";
-    } else {
-        const ticketPrice = 120;
-        const guardPayment = 500;
-        const staffLaunch = 50 * 8;
-
-        let remain = (ticketSale * ticketPrice) - (guardPayment + staffLaunch);
-        return remain;
     }
+    const ticketPrice = 120;
+    const guardPayment = 500;
+    const staffLaunch = 50 * 8;
+
+    let remain = (ticketSale * ticketPrice) - (guardPayment + staffLaunch);
+    return remain;
 }
+console.log(calculateMoney(10));

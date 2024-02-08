@@ -19,12 +19,21 @@
 //Challenge: ইনপুট হিসেবে স্ট্রি ং টাইপের বাইরে অন্য যে কোনো কিছু দিলে এটা শুধুমাত্র “invalid” রিটার্ন করবে ।
 
 // function checkName(name) {
+//     // Check if the input is a string
 //     if (typeof name !== 'string') {
-//         return "invalid";
+//         return "Invalid";
+//     }
+
+//     // Get the last character of the name
+//     const words = name[name.length - 1].toLowerCase();
+//     // const lastLetterIndex = name.length - 1;
+//     // const lastLetter = name[lastLetterIndex].toLowerCase();
+
+//     // Check if the last character is in the list of undesirable characters
+//     if (['A', 'y', 'i', 'e', 'o', 'u', 'w'].includes(words)) {
+//         return "Bad Name";
 //     } else {
-//         let inputSentence = "";
-//         let goodWords = [A, y, i, e, o, u, w];
-//         let is
+//         return "Good Name";
 //     }
 // }
 
@@ -34,25 +43,19 @@ function checkName(name) {
     if (typeof name !== 'string') {
         return "Invalid";
     }
+    const lastLetter = name.toLowerCase()[name.length - 1]; //এইটা ব্যবহার করলে হবে কিনা
+    const goodLetter = ["a", "e", "i", "o", "u", "y", "w"];
 
-    // Get the last character of the name
-    const words = name[name.length - 1].toLowerCase();
-    // const lastLetterIndex = name.length - 1;
-    // const lastLetter = name[lastLetterIndex].toLowerCase();
-
-    // Check if the last character is in the list of undesirable characters
-    if (['A', 'y', 'i', 'e', 'o', 'u', 'w'].includes(words)) {
-        return "Bad Name";
-    } else {
-        return "Good Name";
+    // Check if the last letter is in the goodletter
+    for (let i = 0; i < goodLetter.length; i++) {
+        if (lastLetter === goodLetter[i]) {
+            return "Good Name";
+        }
     }
+    return "Bad Name";
 }
-
-// Test cases
-console.log(checkName(2)); // Output: Bad Name
-console.log(checkName("utsho")); // Output: Bad Name
-console.log(checkName("Roide")); // Output: Bad Name
-console.log(checkName("shanto")); // Output: Bad Name
-console.log(checkName("Salman")); // Output: Good Name
-console.log(checkName("Kamal")); // Output: Good Name
-console.log(checkName("Jamil")); // Output: Good Name
+console.log(checkName("Salman"));
+console.log(checkName("RAFEE")); 
+console.log(checkName("Jhankar"));
+console.log(checkName(199)); 
+console.log(checkName(["Rashed"])); 
