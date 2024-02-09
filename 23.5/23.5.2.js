@@ -57,13 +57,56 @@ const persons = [
 ]
 
 function findPersonDetaila(persons, search) {
+
     const informationStorage = [];
     for (const person of persons) {
         if ((person.name + ", " + person.occupation).includes(search)) {
             informationStorage.push(person);
         }
-    } return informationStorage;
+    }
 
+    if (informationStorage.length === 0) {
+        return "No matching data found";
+    } else if (search.trim() === "") {
+        return "Please provide a valid search term";
+    } else {
+        return informationStorage;
+    }
 }
 const result2 = findPersonDetaila(persons, 'Hoque, Software Engeener');
 console.log(result2);
+
+const result1 = findPersonDetaila(persons, 'Hoque, Software Engineer');
+console.log(result1); // Output: No matching data found
+
+const result3 = findPersonDetaila(persons, '');
+console.log(result3); // Output: Please provide a valid search term
+
+const result4 = findPersonDetaila(persons, 'Hoque, Business Man');
+console.log(result4);
+
+
+
+
+
+
+
+
+
+
+
+//Practice 3 ---------------------------------------------------------------
+const employees = [
+    { name: 'Alice', position: 'Manager', salary: 80000 },
+    { name: 'Bob', position: 'Developer', salary: 70000 },
+    { name: 'Charlie', position: 'Manager', salary: 85000 },
+    { name: 'David', position: 'Developer', salary: 75000 },
+    { name: 'Eve', position: 'Tester', salary: 60000 }
+];
+
+function findEmployeesByPosition(employees, position) {
+
+}
+
+const result = findEmployeesByPosition(employees, 'Manager');
+console.log(result); // Should output: ['Alice', 'Charlie']
