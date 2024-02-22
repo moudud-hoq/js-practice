@@ -26,6 +26,13 @@ const person = {
     },
   },
 };
-
 console.log(person.address.street.first);
 console.log(person.address.street.third);
+
+//31-3 Array Map To Do One Line Loop Magic--------------------------------------------------------------------------------------
+const numbers = [4, 5, 6, 8, 9, 5];
+function doubleIT(num) {
+  return num * 2;
+}
+const result = numbers.map(doubleIT);
+console.log(result);
