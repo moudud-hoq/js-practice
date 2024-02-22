@@ -4,15 +4,14 @@
 function add(num1 = 1111, num2 = 0) {
   /*if we provide 0 then it will be count as a number*/
   const result = num1 + num2;
-  console.log(num1, num2, result);
   return result;
 }
 const sum = add(5, 7);
 const sum2 = add(7);
 const sum3 = add();
 
-console.log(sum); //5, 7, 12; = 12
-console.log(sum2); //7, 0, 7;=7
+console.log(sum); //12
+console.log(sum2); //7
 console.log(sum); //undefined, 0, NAN
 
 //If Value is not provided in a string?
@@ -180,3 +179,31 @@ console.log(actor2);
 
 //30-9 For Of, For In, Module Summary And Practice Problems---------------------------------------------------------------------------------------------------------------
 
+{
+  /* <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const carousel = document.querySelector('.carousel');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function goToSlide(index) {
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+      currentIndex = index;
+    }
+
+    prevBtn.addEventListener('click', function() {
+      if (currentIndex > 0) {
+        goToSlide(currentIndex - 1);
+      }
+    });
+
+    nextBtn.addEventListener('click', function() {
+      if (currentIndex < carouselItems.length - 1) {
+        goToSlide(currentIndex + 1);
+      }
+    });
+  });
+</script> */
+}
