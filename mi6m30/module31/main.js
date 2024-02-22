@@ -40,3 +40,7 @@ const numbers = [4, 5, 6, 8, 9, 5];
 const double2 = (x) => x * 2;
 const output = numbers.map((x) => x * 2);
 console.log(output);
+
+const money = [4, 5, 6, 8, 9, 5];
+const fiveBonus = money.map((num) => num + 5);
+console.log(fiveBonus);
