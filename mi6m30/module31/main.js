@@ -42,5 +42,10 @@ const output = numbers.map((x) => x * 2);
 console.log(output);
 
 const money = [4, 5, 6, 8, 9, 5];
-const fiveBonus = money.map((num) => num + 5);
+const fiveBonus = money.map((num) => num + 100);
 console.log(fiveBonus);
+
+//          31-4 Foreach, Filter, Find, And Differences Between Them----------------------------------
+const selected = money.filter((p) => p % 2 === 1);
+const selected1 = money.filter((p) => p % 2 === 0);
+console.log(selected1);

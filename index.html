@@ -67,14 +67,47 @@
     </header>
     <!-- Header End -->
 
+    <!-- Hero Start -->
+    <!-- <section>
+        <div class="diff aspect-[16/9]">
+            <div class="diff-item-1">
+                <div class="bg-primary text-primary-content text-9xl font-black grid place-content-center">Cartcount</div>
+            </div>
+            <div class="diff-item-2">
+                <div class="bg-base-200 text-9xl font-black grid place-content-center">Cartcount</div>
+            </div>
+            <div class="diff-resizer"></div>
+        </div>
+    </section> -->
+    <!-- Hero End -->
     <!-- Main -->
-    <section class="container mx-auto flex flex-col justify-center items-center min-h-screen">
+    <section class="container mx-auto flex flex-col justify-center items-center pt-10">
         <h1 class="text-2xl">Button</h1>
-        <div>
-            <button class="btn btn-outline btn-info">Info</button>
-            <button class="btn btn-outline btn-success">Success</button>
-            <button class="btn btn-outline btn-warning">Warning</button>
-            <button class="btn btn-outline btn-error">Error</button>
+        <div class="px-36 py-4 flex gap-2 flex-col border-2 border-red-700 bg-lime-100" id="buttonContainer">
+            <button class="btn btn-outline btn-info" data-amount="10">Info</button>
+            <button class="btn btn-outline btn-success" data-amount="20">Success</button>
+            <button class="btn btn-outline btn-warning" data-amount="30">Warning</button>
+            <button class="btn btn-outline btn-warning" data-amount="30">Warning</button>
+            <button class="btn btn-outline btn-error" data-amount="40">Error</button>
+        </div>
+    </section>
+    <!-- End Main -->
+
+    <!-- Counting Number -->
+    <section class="container mx-auto my-10 flex justify-center">
+        <div class="stats bg-primary text-primary-content">
+            <div class="stat">
+                <div class="stat-title">Account balance</div>
+                <div class="stat-value" id="accountBalance"><span>$</span>0</div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Current balance</div>
+                <div class="stat-value" id="currentBalance"><span>$</span>0</div>
+            </div>
+            <div class="stat">
+                <div class="stat-title">Total count</div>
+                <div class="stat-value" id="totalCount">0</div>
+            </div>
         </div>
     </section>
 
