@@ -1,0 +1,101 @@
+/* styles.css */
+
+/* Navbar */
+.navbar {
+    background-color: #1f2937;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .btn-close-page {
+    background-color: #dc2626;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar .btn-close-page:hover {
+    background-color: #c53030;
+  }
+  
+  .navbar .btn-go-back {
+    background-color: #3b82f6;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar .btn-go-back:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Main Section */
+  .main-section {
+    background-color: #4b5563;
+    padding: 16px;
+  }
+  
+  .main-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 16px;
+  }
+  
+  .main-section .content-container {
+    max-width: 48rem;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+  
+  .main-section .content-container p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  
+  .main-section .content-container ul {
+    margin-left: 2rem;
+  }
+  
+  .main-section .content-container ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .main-section .content-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .main-section .content-container code {
+    background-color: #d1d5db;
+    color: #dc2626;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  /* Button */
+  .btn-wide-analysis {
+    background-image: linear-gradient(to right, #2563eb, #3b82f6);
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-wide-analysis:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  }
+  
