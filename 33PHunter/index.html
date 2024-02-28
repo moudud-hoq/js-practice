@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phone Hunter</title>
 
+    <!-- Google Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/1245162259.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- DaisyUI -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
@@ -12,14 +18,94 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-
-
   </head>
   <body class="container mx-auto">
-<main class="container mx-auto p-20 text-3xl font-bold bg-cyan-200">
-    <button class="border-2 border-purple-700 p-4 rounded-2xl bg-black text-yellow-100" onclick="dataLoad()">Reload Data</button>
+    <!-- Navbar start -->
+    <nav
+      class="flex flex-col text-center md:flex-row py-4 px-10 my-4 bg-slate-200 justify-between shadow-xl rounded-t-xl"
+    >
+      <div>
+        <h1
+          class="max-w-56 mx-auto font-semibold border-2 border-white bg-indigo-600 text-white p-3 rounded-xl"
+        >
+          Phone Hunting API
+        </h1>
+      </div>
+      <div>
+        <button
+          class="font-semibold border-2 border-white bg-indigo-600 text-white p-3 rounded-xl"
+        >
+          Sign Up
+        </button>
+      </div>
+    </nav>
+    <!-- Navbar end-->
 
-</main>
+    <!-- Hero Section Start -->
+    <!-- <section>
+      <div class="hero min-h-screen bg-base-200">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Phone Hunting</h1>
+            <p class="py-6">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
+              et a id nisi.
+            </p>
+            <button class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- Hero Section End -->
+
+    <main
+      class="container mx-auto p-4 text-3xl font-bold bg-cyan-200 flex flex-col justify-center items-center gap-4"
+    >
+      <!-- Search Section -->
+      <section class="bg-white w-full p-4 rounded-xl flex gap-1">
+        <div>
+          <label class="input flex justify-center items-center gap-2 bg-black">
+            <input
+              id="search-field"
+              type="text"
+              class="grow"
+              placeholder="Search"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </label>
+        </div>
+        <div>
+          <button onclick="handleSearch()" class="btn btn-neutral bg-black">
+            Search
+          </button>
+        </div>
+      </section>
+
+      <!-- Product Section or Search Result -->
+      <section class="container">
+        <!--Step:6> Spinner or Loader -->
+        <div id="loading-spinner" class="text-center my-20 hidden">
+          <span
+            id="search-loader2"
+            class="loading loading-spinner text-info"
+          ></span>
+        </div>
+
+        <!-- Main Product Section -->
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          <!-- The detains in the js file -->
+        </div>
+
+        <!-- Show All Buttons for step 5-->
+        <div id="show-all-container" class="hidden">
+          <button class="btn btn-neutral">Show All</button>
+        </div>
+      </section>
+    </main>
 
     <!-- Scripts -->
     <script src="js/phone.js"></script>
