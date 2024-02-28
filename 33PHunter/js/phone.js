@@ -1,12 +1,33 @@
 //Step 9: Set functionality to see details each products information in a Modal
 const handleShowDetail = async (id) => {
-  console.log("clicked", id);
+  //   console.log("clicked", id);
 
   //step 9.1: load single phone data
   const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}
     `);
   const data = await res.json();
-  console.log(data);
+  //step 10.1
+  const phone = data.data;
+  showPhoneDetails(phone);
+};
+
+//Step 10: Show Single phone details
+const showPhoneDetails = (phone) => {
+  console.log(phone);
+  const phoneName = document.getElementById("show-details-phone-name");
+  const showDetailContainer = document.getElementById("show-detail-container");
+  showDetailContainer.innerHTML = `
+  
+        <p>Name:${phone.name}</span</p>
+        <img src="${phone.image}"/>
+        <p style="font-size:15px";><span>Brand:</span>${phone.brand}</p>
+        <p style="font-size:15px";><span>Main Features:</span>${phone?.mainFeatures?.displaySize}</p>
+        <p style="font-size:15px";><span>Release:</span>${phone.releaseDate}</p>
+
+
+  `;
+  //show the modal
+  show_details_modal.showModal();
 };
 
 //data load using async await
@@ -131,3 +152,4 @@ const hideShowAllButton = () => {
   const showAllContainer = document.getElementById("show-all-container");
   showAllContainer.classList.add("hidden");
 };
+loadPhone();
