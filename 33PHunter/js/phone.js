@@ -1,3 +1,8 @@
+//Step 9: Set functionality to see details each products information in a Modal
+const handleShowDetail = (id) => {
+  console.log("clicked", id);
+};
+
 //data load using async await
 const loadPhone = async (searchText, isShowAll) => {
   const res = await fetch(`
@@ -52,17 +57,20 @@ const displayPhones = (phones, isShowAll) => {
 <button class="btn btn-primary">Add To Cart</button>
 </div>
 <div class="card-actions">
-<button class="btn btn-primary">Buy Now</button>
+<button onclick="handleShowDetail('${phone.slug}')" class="btn btn-primary">Show Details</button>
 </div>
 </div>
   </div>
     `;
+
     //Step:4 Do appendChild
     phoneContainer.appendChild(phoneCard);
   });
+
   //Step:6-2:-hide loading spinner
   startToggleLoadingSpinner(false);
 };
+
 //--------------------------------------------------------------
 
 // Handle Search Button
