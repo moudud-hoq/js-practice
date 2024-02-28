@@ -63,7 +63,7 @@
       class="container mx-auto p-4 text-3xl font-bold bg-cyan-200 flex flex-col justify-center items-center gap-4"
     >
       <!-- Search Section -->
-      <section class="bg-white w-full p-4 rounded-xl flex gap-1">
+      <section class="w-full p-4 rounded-xl flex gap-1">
         <div>
           <label class="input flex justify-center items-center gap-2 bg-black">
             <input
@@ -101,9 +101,14 @@
         </div>
 
         <!-- Show All Buttons for step 5-->
-        <div id="show-all-container" class="hidden">
-          <button class="btn btn-neutral">Show All</button>
+        <div id="show-all-container" class="hidden text-center my-5">
+          <button onclick="handleShowAll()" class="btn btn-neutral">
+            Show All
+          </button>
         </div>
+
+        <!--Step 8: Message Container & If the button has been clicked for the second time, hide it and display an error message -->
+        <div id="message-container" class="text-center my-5"></div>
       </section>
     </main>
 

@@ -1,16 +1,16 @@
 //data load using async await
-const loadPhone = async (searchText) => {
+const loadPhone = async (searchText, isShowAll) => {
   const res = await fetch(`
   https://openapi.programming-hero.com/api/phones?search=${searchText}
   `);
   const data = await res.json();
   const phonesData = data.data;
 
-  displayPhones(phonesData);
+  displayPhones(phonesData, isShowAll);
 };
 
 // show data in UI
-const displayPhones = (phones) => {
+const displayPhones = (phones, isShowAll) => {
   //Step:1 Where we will set the div?
   const phoneContainer = document.getElementById("phone-container");
   //When we will search then previous data will clear:
@@ -23,9 +23,12 @@ const displayPhones = (phones) => {
   } else {
     showAllContainer.classList.add("hidden");
   }
-  //   Step- 5> display only first 10 phones
-  phones = phones.slice(0, 9);
+  //   Step- 5> display only first 12 phones, if not show all
+  if (!isShowAll) {
+    phones = phones.slice(0, 12);
+  }
 
+  //------------------------------------------------------------------
   phones.forEach((phone) => {
     //Step:2.0 Create a div
     const phoneCard = document.createElement("div");
@@ -62,15 +65,16 @@ const displayPhones = (phones) => {
   //Step:6-2:-hide loading spinner
   startToggleLoadingSpinner(false);
 };
+//--------------------------------------------------------------
 
 // Handle Search Button
-const handleSearch = () => {
+const handleSearch = (isShowAll) => {
   // step:6.1> function to show loader
   startToggleLoadingSpinner(true);
   //Handle Search Button
   const searchField = document.getElementById("search-field");
   const searchText = searchField.value;
-  loadPhone(searchText);
+  loadPhone(searchText, isShowAll);
 };
 
 // step:6> function to show loader
@@ -78,14 +82,40 @@ const startToggleLoadingSpinner = (isLoading) => {
   const loadingSpinner = document.getElementById("loading-spinner");
   if (isLoading) {
     loadingSpinner.classList.remove("hidden");
-  }else{
+  } else {
     loadingSpinner.classList.add("hidden");
-
   }
 };
-//function to hide loader
-// const stopToggleLoadingSpinner = () => {
-//   const loadingSpinner = document.getElementById("loading-spinner");
-//   loadingSpinner.classList.add("hidden");
-// };
-// loadPhone();
+
+// Step 7: Handle Show All Button
+let showAllClickCount = 0;
+
+// Step 7: Handle Show All Button
+const handleShowAll = () => {
+  const searchField = document.getElementById("search-field");
+  const searchText = searchField.value;
+
+  // Increment the click count
+  showAllClickCount++;
+
+  // Call loadPhone with isShowAll set to true
+  loadPhone(searchText, true);
+
+  // If the button has been clicked for the second time, hide it and display an error message
+  if (showAllClickCount === 2) {
+    hideShowAllButton();
+    displayProductsReachedMessage();
+  }
+};
+
+// Step 8: Function to display an error message when all products have been reached
+const displayProductsReachedMessage = () => {
+  const messageContainer = document.getElementById("show-all-container");
+  messageContainer.innerHTML = "Products reached out.";
+};
+
+// Step 8: Function to hide the "Show All" button
+const hideShowAllButton = () => {
+  const showAllContainer = document.getElementById("show-all-container");
+  showAllContainer.classList.add("hidden");
+};
