@@ -1,6 +1,12 @@
 //Step 9: Set functionality to see details each products information in a Modal
-const handleShowDetail = (id) => {
+const handleShowDetail = async (id) => {
   console.log("clicked", id);
+
+  //step 9.1: load single phone data
+  const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}
+    `);
+  const data = await res.json();
+  console.log(data);
 };
 
 //data load using async await
