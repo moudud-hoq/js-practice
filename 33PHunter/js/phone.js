@@ -45,9 +45,7 @@ const displayPhones = (phones, isShowAll) => {
   </figure>
   <div class="card-body items-center text-center">
     <h2 class="card-title">${phone.phone_name}</h2>
-    <p class="text-sm">Model: ${phone.slug}</p>
     <p class="text-sm">Brand: ${phone.brand}</p>
-    <p class="text-sm">Price:</p>
 
 <div class="flex items-center gap-8">
 <div class="card-actions">
