@@ -101,14 +101,14 @@ const handleShowAll = () => {
   // Call loadPhone with isShowAll set to true
   loadPhone(searchText, true);
 
-  // If the button has been clicked for the second time, hide it and display an error message
+  // If the button has been clicked for the second time, hide it and display a message
   if (showAllClickCount === 2) {
     hideShowAllButton();
     displayProductsReachedMessage();
   }
 };
 
-// Step 8: Function to display an error message when all products have been reached
+// Step 8: Function to display a message when all products have been reached
 const displayProductsReachedMessage = () => {
   const messageContainer = document.getElementById("show-all-container");
   messageContainer.innerHTML = "Products reached out.";
