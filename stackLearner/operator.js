@@ -53,4 +53,3 @@ console.log(a <= c);
 let w = 5;
 let w1 = 10 + w++;
 console.log(w1);
-  01309438422

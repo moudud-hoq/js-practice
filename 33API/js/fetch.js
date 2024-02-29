@@ -1,4 +1,29 @@
-function photoData() {
+// SHow the user list
+function userDataList() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((userDataList) => displayUserData(userDataList));
+  }
+  
+  function displayUserData(users) {
+    const userDataContainer = document.getElementById("user-data-container");
+  
+    for (const user of users) {
+      const usersDiv = document.createElement("div");
+      usersDiv.classList.add("user");
+      usersDiv.innerHTML = `
+      <h3>User-${user.id}</h3>
+      <h4>Name: ${user.name}</h4>
+      <p>Email:${user.email}</p>
+      <p>Address:${user.address.city}</p>
+      `; //    <p>Address: ${JSON.stringify(user.address)}</p>
+      userDataContainer.appendChild(usersDiv);
+    }
+  }
+  userDataList();
+  //End SHow the user list------------------------------------------------
+
+  function photoData() {
   fetch("https://jsonplaceholder.typicode.com/photos")
     .then((res) => res.json())
     .then((photoData) => displayPhotoData(photoData));
@@ -13,7 +38,7 @@ function displayPhotoData(photoData) {
   }
 }
 
-//post data
+//post data-----------------------------------------------------
 function postData() {
   fetch("https://jsonplaceholder.typicode.com/posts")
     .then((res) => res.json())
@@ -39,26 +64,3 @@ function displayPostData(posts) {
 }
 postData();
 
-// SHow the user list
-function userDataList() {
-  fetch("https://jsonplaceholder.typicode.com/users")
-    .then((res) => res.json())
-    .then((userDataList) => displayUserData(userDataList));
-}
-
-function displayUserData(users) {
-  const userDataContainer = document.getElementById("user-data-container");
-
-  for (const user of users) {
-    const usersDiv = document.createElement("div");
-    usersDiv.classList.add("user");
-    usersDiv.innerHTML = `
-    <h3>User-${user.id}</h3>
-    <h4>Name: ${user.name}</h4>
-    <p>Email:${user.email}</p>
-    <p>Address:${user.address.city}</p>
-    `; //    <p>Address: ${JSON.stringify(user.address)}</p>
-    userDataContainer.appendChild(usersDiv);
-  }
-}
-userDataList();
