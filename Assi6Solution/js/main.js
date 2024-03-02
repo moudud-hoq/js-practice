@@ -1,4 +1,4 @@
-//Step 1:
+
 const btnContainer = document.getElementById("btn-container");
 const cardContainer = document.getElementById("card-container");
 const errorElement = document.getElementById("error-element"); //4.0
@@ -76,6 +76,7 @@ const fetchDataByCategories = (categoryID, sortByView) => {
                 <img class="w-6 h-6" src="./images/verify.png" alt="" />
                 `;
         } //3.1
+        
         const newCard = document.createElement("div");
         newCard.innerHTML = `
             <div class="card w-full bg-base-100 shadow-xl">
